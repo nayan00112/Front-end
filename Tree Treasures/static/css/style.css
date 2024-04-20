@@ -1,0 +1,268 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4rem;
+    background-color: #060807;
+    color: white;
+    padding: 0px 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+nav ul li a {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+nav .header {
+    font-size: x-large;
+}
+
+nav button {
+    background-color: #427E46;
+    border: 0px;
+    border-radius: 5px;
+    padding: 0.4rem 2rem;
+}
+
+nav button:hover {
+    background-color: #151A19;
+    color: #427E46;
+    outline: 2px solid #427E46;
+
+}
+
+
+.bgimagemain {
+    background-image: url("../img/bg.jpg");
+    color: white;
+    height: calc(100vh - 4rem);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 200px #060807 inset;
+    /* filter: brightness(50%); */
+}
+
+.bgimagemain h1 {
+    font-size: 6rem;
+    color: white;
+}
+
+.text_light {
+    color: #b3eed0;
+    text-align: center;
+    width: 50%;
+    margin: 1rem auto;
+    margin-bottom: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    padding-bottom: 1rem;
+}
+
+.text_light h2 {
+    font-size: xx-large;
+    padding-bottom: 1rem;
+
+    background-image: linear-gradient(to right, #2e8751, #b3eed0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+main {
+    background-color: #060807;
+    /* background-color: red; */
+    padding: 2rem 0;
+}
+
+.gradientbg {
+    margin: 2rem;
+    margin-top: 0;
+    box-shadow: 0 0 40px 10px #427E46;
+    border-radius: 4rem;
+    background-image: linear-gradient(to right, #151b19, #070c09, #151a19);
+}
+
+.cards {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* justify-content: space-evenly; */
+    color: #b3eed0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 60vw;
+    margin: auto;
+}
+
+.card {
+    display: block;
+    /* width: 24%; */
+    margin-bottom: 2rem;
+    border: 2px #1c3224 solid;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.card h2 {
+    font-size: larger;
+    color: #5daf62;
+}
+
+.card:hover {
+    color: white;
+    background-color: #365f45;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+
+}
+
+.header2 {
+    text-align: center;
+    padding: 2rem;
+    color: #96c8af;
+}
+
+.padding2 {
+    padding-top: 2rem;
+}
+
+.padding2 q {
+    font-size: larger;
+    font-style: italic;
+    line-height: 2rem;
+}
+
+footer {
+    color: #96c8af;
+    letter-spacing: 0.05rem;
+    min-height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    box-shadow: 0 -10px 20px #427E46;
+    padding-bottom: 0;
+    background-color: #060807;
+    line-height: 1.5rem;
+    text-align: center;
+}
+footer a{
+    color: #b3eed0;
+    text-decoration: none;
+}
+
+
+.threelinescont{
+    /* display: flex; */
+    /* For desktop display is none */
+    /* for mobile device display became flex */
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.bar{
+    width: 100%;
+    height: 3px;
+    
+    
+    background-color: white;
+    border-radius: 5px;
+
+}
+
+
+@media (max-width:800px) {
+    .threelinescont{
+        display: flex;
+    }
+
+    nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        /* background-color: red; */
+        text-align: center;
+
+        /* bydefault nav is hide hence display is none */
+        /* display: flex; */
+        display: none;
+        /* using js we can change display to flex */
+        /* sams for "join" button */
+        
+    }
+
+    .bgimagemain h1 {
+        font-size: 5rem;
+        color: white;
+        text-align: center;
+    }
+
+    nav ul li{
+        padding: 0.5rem 0px;
+
+    }
+    nav ul li:hover{
+        background-color: #2e8751;
+
+    }
+    #nav_btn{
+        
+        /* bydefault nav is hide hence display is none */
+        /* display: flex; */
+        padding-bottom: 1rem;
+        display: none;
+        /* using js we can change display to flex */
+
+        /* sams for "join" button */
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    footer{
+        padding: 1rem 0px;
+    }
+}
